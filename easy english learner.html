@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+function askForWords(words){
+
+		while(words.length != 0){
+		var i = parseInt(Math.random() * words.length)
+		var userTranslate = prompt("как переводится слово: " + words[i][0])
+		if(userTranslate == words[i][1]){
+			alert("правильно!")
+			words.splice(i, 1)
+		}else{
+			alert("правильный ответ: " + words[i][1])
+		}
+	}
+}
+
+var easyWords = [
+	["food", "еда"],
+	["bike", "велосипед"],
+	["apple", "яблоко"],
+	["do", "делать"],
+	["mean", "иметь в виду"],
+]
+
+askForWords(easyWords)
+
+var quit = prompt("вы запомнили все слова из предложенных, поздравляю, хотите переходим на следующий уровень")
+
+	alert("продолжаем, спасибо за тест проги от JaBz-eniy'a")
+	
+	var hardLevelwords = [
+	["chainsaw", "бензопила"],
+	["squirrel", "белка"],
+	["castle", "замок"],
+	["homeland", "родина"],
+	["sewerage", "канализация"],
+	["bottom", "дно"]
+	]
+
+askForWords(hardLevelwords)
+
+	alert("+ 10 слов в словарный запас, на этом мы заканчиваем!")
+	document.write("by JaBz-eniy")
+	
+
+
+</script>
